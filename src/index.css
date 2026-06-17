@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Chakra Colors */
+  --color-chakra-7: #ff007f; /* Magenta - Coronário */
+  --color-chakra-6: #8b00ff; /* Violeta/Roxo - Frontal */
+  --color-chakra-5: #0070ff; /* Azul - Laríngeo */
+  --color-chakra-4: #00e676; /* Verde - Cardíaco */
+  --color-chakra-3: #ffd600; /* Amarelo - Umbilical */
+  --color-chakra-2: #ff6d00; /* Laranja - Esplênico */
+  --color-chakra-1: #d50000; /* Vermelho - Básico */
+}
+
+/* Custom fade scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+.chakra-glow {
+  filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.15));
+}
+
+.chakra-gradient {
+  background: linear-gradient(90deg, 
+    var(--color-chakra-1) 0%, 
+    var(--color-chakra-2) 16%, 
+    var(--color-chakra-3) 33%, 
+    var(--color-chakra-4) 50%, 
+    var(--color-chakra-5) 66%, 
+    var(--color-chakra-6) 83%, 
+    var(--color-chakra-7) 100%
+  );
+}
+
+/* ========================================== */
+/* HIGH DENSITY LIGHT THEME ADJUSTMENTS       */
+/* ========================================== */
+
+/* Main canvas container replacement */
+main {
+  background-color: #f8fafc !important; /* Soft slate-50 canvas */
+  color: #1e293b !important;
+}
+
+/* Card overrides: From deep dark-slate backgrounds to clean white containers */
+main .bg-slate-900,
+main .bg-slate-900\/95,
+main .bg-slate-900\/90,
+main .bg-slate-900\/85,
+main .bg-slate-900\/80,
+main .bg-slate-900\/75,
+main .bg-slate-900\/70,
+main .bg-slate-900\/65,
+main .bg-slate-900\/60,
+main .bg-slate-900\/50,
+main .bg-slate-900\/40,
+main .bg-slate-900\/30,
+main .bg-slate-950,
+main .bg-slate-950\/95,
+main .bg-slate-950\/90,
+main .bg-slate-950\/85,
+main .bg-slate-950\/80,
+main .bg-slate-950\/75,
+main .bg-slate-950\/70,
+main .bg-slate-950\/65,
+main .bg-slate-950\/60,
+main .bg-slate-950\/50,
+main .bg-slate-950\/40,
+main .bg-slate-950\/30 {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Inner lists, cards or secondary level elements */
+main .bg-slate-950\/80,
+main .bg-slate-950\/50,
+main .bg-slate-900\/30 {
+  background-color: #f8fafc !important; /* light state gray */
+  border-color: #e2e8f0 !important;
+}
+
+/* Primary heading colors replacement */
+main .text-white,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main th {
+  color: #0f172a !important; /* Deep Slate-900 */
+}
+
+/* Secondary font color adjustments */
+main .text-slate-400,
+main .text-slate-355,
+main .text-slate-350,
+main .text-slate-300 {
+  color: #334155 !important; /* Deep Slate-700 */
+}
+
+main .text-slate-500 {
+  color: #1e293b !important; /* Deep Slate-800 */
+}
+
+main .text-slate-600,
+main .text-slate-700 {
+  color: #0f172a !important; /* Deep Slate-900 */
+}
+
+/* Input boxes & form fields styling */
+main input,
+main select,
+main textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important; /* Slate-300 */
+}
+
+main input:focus,
+main select:focus,
+main textarea:focus {
+  border-color: #6366f1 !important; /* Indigo accent */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+main input::placeholder,
+main textarea::placeholder {
+  color: #94a3b8 !important; /* Slate-400 */
+}
+
+/* Table rows & lists dividers */
+main .divide-slate-800 > :not([hidden]) ~ :not([hidden]),
+main .divide-slate-850 > :not([hidden]) ~ :not([hidden]),
+main .border-slate-850,
+main .border-slate-800 {
+  border-color: #f1f5f9 !important; /* Slate-100 */
+}
+
+main .hover\:bg-slate-950\/40:hover,
+main .hover\:bg-slate-900\/40:hover,
+main .hover\:bg-slate-900\/20:hover {
+  background-color: #f1f5f9 !important; /* Light slate hover */
+}
+
+/* Sub-buttons and secondary badges */
+main button.bg-slate-950,
+main button.bg-slate-900,
+main button.bg-slate-900\/60 {
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+main button.bg-slate-950:hover,
+main button.bg-slate-900:hover,
+main button.bg-slate-900\/60:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+main button.bg-slate-950 *,
+main button.bg-slate-900 *,
+main button.bg-slate-900\/60 * {
+  color: inherit !important;
+}
+
+/* Color codes mapping for status alerts and indicators */
+main .bg-emerald-950,
+main .bg-emerald-950\/85,
+main .bg-emerald-950\/80,
+main .bg-emerald-950\/40,
+main .bg-emerald-900\/40 {
+  background-color: #ecfdf5 !important; /* ultra light green */
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+
+main .bg-red-950,
+main .bg-red-950\/85,
+main .bg-red-950\/80,
+main .bg-red-950\/40,
+main .bg-red-900\/25,
+main .bg-red-900\/20,
+main .bg-red-900\/40 {
+  background-color: #fef2f2 !important; /* light error red */
+  color: #b91c1c !important;
+  border-color: #fca5a5 !important;
+}
+
+main .bg-blue-950,
+main .bg-blue-950\/85,
+main .bg-blue-950\/80,
+main .bg-blue-950\/40,
+main .bg-blue-950\/30,
+main .bg-blue-900\/40 {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+
+main .bg-amber-950,
+main .bg-amber-950\/85,
+main .bg-amber-950\/80,
+main .bg-amber-950\/45,
+main .bg-amber-950\/40,
+main .bg-amber-900\/40 {
+  background-color: #fffbeb !important;
+  color: #b45309 !important;
+  border-color: #fde68a !important;
+}
+
+main .bg-purple-950,
+main .bg-purple-950\/85,
+main .bg-purple-950\/80,
+main .bg-purple-950\/40,
+main .bg-purple-900\/40 {
+  background-color: #f5f3ff !important; /* light purple */
+  color: #6b21a8 !important;
+  border-color: #ddd6fe !important;
+}
+
+main .bg-yellow-950,
+main .bg-yellow-950\/85,
+main .bg-yellow-950\/80,
+main .bg-yellow-950\/40,
+main .bg-yellow-900\/40 {
+  background-color: #fef9c3 !important; /* light yellow */
+  color: #854d0e !important;
+  border-color: #fef08a !important;
+}
+
+main .bg-sky-950,
+main .bg-sky-950\/85,
+main .bg-sky-950\/80,
+main .bg-sky-950\/40,
+main .bg-sky-900\/40 {
+  background-color: #e0f2fe !important; /* light sky */
+  color: #0369a1 !important;
+  border-color: #bae6fd !important;
+}
+
+/* Ensure borders with dark mode colors translate nicely to pretty light pastel borders */
+main .border-emerald-900,
+main .border-emerald-800,
+main .border-emerald-950 {
+  border-color: #a7f3d0 !important;
+}
+
+main .border-red-900,
+main .border-red-800,
+main .border-red-950 {
+  border-color: #fca5a5 !important;
+}
+
+main .border-blue-900,
+main .border-blue-800,
+main .border-blue-950 {
+  border-color: #bfdbfe !important;
+}
+
+main .border-purple-900,
+main .border-purple-800,
+main .border-purple-950 {
+  border-color: #ddd6fe !important;
+}
+
+main .border-yellow-900,
+main .border-yellow-800,
+main .border-yellow-950 {
+  border-color: #fef08a !important;
+}
+
+main .border-sky-900,
+main .border-sky-800,
+main .border-sky-950 {
+  border-color: #bae6fd !important;
+}
+
+main .border-indigo-900,
+main .border-indigo-850 {
+  border-color: #c7d2fe !important;
+}
+
+/* Accent text contrast translation map for beautiful high-contrast light theme */
+main .text-emerald-400 { color: #047857 !important; }
+main .text-red-400 { color: #b91c1c !important; }
+main .text-blue-400 { color: #1d4ed8 !important; }
+main .text-cyan-400 { color: #0f766e !important; }
+main .text-indigo-400 { color: #4338ca !important; }
+main .text-amber-400 { color: #b45309 !important; }
+main .text-orange-400 { color: #c2410c !important; }
+main .text-fuchsia-400 { color: #86198f !important; }
+main .text-purple-400 { color: #6b21a8 !important; }
+
+main .hover\:text-red-400:hover { color: #b91c1c !important; }
+main .hover\:text-white:hover { color: #0f172a !important; }
+
+/* Reset specific texts back to real white if they are white text badge status */
+main .text-white-forced {
+  color: #ffffff !important;
+}
+
+/* ========================================================================= */
+/* EXTENDED UI CONTRAST CORRECTIONS (HIGH DENSITY LIGHT THEME COMPATIBILITY) */
+/* ========================================================================= */
+
+/* Ensure buttons with solid dark background classes always have clear, legible white text */
+main button.bg-indigo-500,
+main button.bg-indigo-600,
+main button.bg-indigo-650,
+main button.bg-indigo-700,
+main button.bg-indigo-750,
+main button.bg-blue-600,
+main button.bg-blue-700,
+main button.bg-emerald-600,
+main button.bg-emerald-700,
+main button.bg-red-600,
+main button.bg-red-700,
+main button.bg-purple-600,
+main button.bg-purple-700,
+main button.bg-slate-800,
+main button.bg-slate-850,
+main button.bg-slate-900,
+main button.bg-slate-950,
+main a.bg-indigo-600,
+main a.bg-emerald-600,
+main a.bg-blue-600 {
+  color: #ffffff !important;
+}
+
+main button.bg-indigo-500 *,
+main button.bg-indigo-600 *,
+main button.bg-indigo-650 *,
+main button.bg-indigo-700 *,
+main button.bg-indigo-750 *,
+main button.bg-blue-600 *,
+main button.bg-blue-700 *,
+main button.bg-emerald-600 *,
+main button.bg-emerald-700 *,
+main button.bg-red-600 *,
+main button.bg-red-700 *,
+main button.bg-purple-600 *,
+main button.bg-purple-700 *,
+main button.bg-slate-800 *,
+main button.bg-slate-850 *,
+main button.bg-slate-900 *,
+main button.bg-slate-900\/60 *,
+main button.bg-slate-950 *,
+main a.bg-indigo-600 *,
+main a.bg-emerald-600 * {
+  color: #ffffff !important;
+}
+
+/* Specific background contrast corrections for elements on dark/color blocks */
+main .bg-indigo-600,
+main .bg-indigo-650,
+main .bg-indigo-700,
+main .bg-indigo-805,
+main .bg-indigo-950,
+main .bg-indigo-900,
+main .bg-blue-600,
+main .bg-blue-700,
+main .bg-emerald-600,
+main .bg-red-600,
+main .bg-purple-600,
+main .bg-purple-700,
+main .bg-fuchsia-600,
+main [class*="bg-[var(--color-chakra-"] {
+  color: #ffffff !important;
+}
+
+/* Ensure text children inside solid dark colored blocks are readable white */
+main .bg-indigo-600 *,
+main .bg-indigo-650 *,
+main .bg-indigo-700 *,
+main .bg-indigo-805 *,
+main .bg-indigo-900 *,
+main .bg-indigo-950 *,
+main .bg-blue-600 *,
+main .bg-blue-700 *,
+main .bg-emerald-600 *,
+main .bg-emerald-700 *,
+main .bg-red-600 *,
+main .bg-red-700 *,
+main .bg-purple-600 *,
+main .bg-purple-700 *,
+main .bg-fuchsia-600 *,
+main [class*="bg-[var(--color-chakra-"] * {
+  color: #ffffff !important;
+}
+
+/* Forum, Communications and Chat system specific fixes */
+main .bg-indigo-650 {
+  background-color: #4f46e5 !important; /* Perfect Solid Indigo-600 */
+}
+
+/* Ensure active segment controls inside sidebar / main headers have excellent contrast */
+main .bg-slate-950 {
+  background-color: #f1f5f9 !important; /* light grey border block */
+  border: 1px solid #cbd5e1 !important;
+}
+main .bg-slate-950 button {
+  color: #475569 !important;
+  font-weight: 500 !important;
+}
+main .bg-slate-950 button.bg-slate-850 {
+  background-color: #ffffff !important;
+  color: #4f46e5 !important; /* Premium branding Indigo */
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+}
+
+/* Keep active segment selection contrasting on white background controls */
+main button.bg-white.text-indigo-700,
+main button.bg-white.text-indigo-800 {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;   /* Solid blue text */
+  border-color: #bfdbfe !important;
+}
+
+/* Ensure badge background contrast and readable texts for light alerts */
+main .bg-purple-50 { background-color: #f3e8ff !important; color: #6b21a8 !important; }
+main .bg-cyan-50 { background-color: #ecfeff !important; color: #155e75 !important; }
+main .bg-emerald-50 { background-color: #ecfdf5 !important; color: #065f46 !important; }
+main .bg-fuchsia-50 { background-color: #fdf4ff !important; color: #86198f !important; }
+main .bg-teal-50 { background-color: #f0fdfa !important; color: #0f766e !important; }
+main .bg-amber-50 { background-color: #fffbeb !important; color: #92400e !important; }
+main .bg-blue-50 { background-color: #eff6ff !important; color: #1e40af !important; }
+main .bg-red-50 { background-color: #fef2f2 !important; color: #991b1b !important; }
+
+/* Keep active chakra highlight visualizer text white */
+main button[style*="background-color: var(--color-chakra-"] *,
+main button[style*="background-color: var(--color-chakra-"] {
+  color: #ffffff !important;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "SGFCe - Gestão Fraternidades Espíritas",
+  "description": "Sistema de Gestão de Fraternidades e Centros Espíritas com foco em administração, finanças, colaboradores, e prontuários de Atendimento Fraterno.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
